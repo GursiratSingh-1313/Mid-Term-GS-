@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gursirat Singh's developing skills and areas of interest.">
+    <meta name="theme-color" content="#f6f5f0">
+    <title>Skills — Gursirat Singh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="wordmark" href="index.html" aria-label="Gursirat Singh, home">GS<span>.</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation">
+                <span></span><span></span>
+            </button>
+            <div class="nav-links" id="site-menu">
+                <a href="index.html#about">About</a>
+                <a href="index.html#resume">Resume</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="index.html#highlights">Highlights</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="skills-hero page-wrap" aria-labelledby="skills-title">
+            <div class="skills-hero-copy">
+                <div class="section-label"><span>01 / SKILLS</span><span class="label-line"></span></div>
+                <h1 id="skills-title">Building my<br><span>toolkit.</span></h1>
+                <p>A work in progress—these are the areas I’m developing through my studies and interests.</p>
+            </div>
+            <aside class="skills-side-note">
+                <span>MY APPROACH</span>
+                <strong>Stay curious.<br>Keep learning.</strong>
+            </aside>
+        </section>
+
+        <section class="skills-details section-pad" id="skills" aria-labelledby="skills-details-title">
+            <div class="page-wrap">
+                <div class="section-label"><span>02 / AREAS OF FOCUS</span><span class="label-line"></span></div>
+                <div class="skills-details-heading">
+                    <h2 id="skills-details-title">Learning by building.</h2>
+                    <p>My current interests bring together finance, analytical thinking, and digital business.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-card-top">
+                            <span>01</span>
+                            <span>AREA OF FOCUS</span>
+                        </div>
+                        <h3>Finance &amp; numerical thinking</h3>
+                        <p>Exploring my interest in finance and numbers, and how they inform business decisions.</p>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-card-top">
+                            <span>02</span>
+                            <span>AREA OF FOCUS</span>
+                        </div>
+                        <h3>Analytical thinking</h3>
+                        <p>Developing a thoughtful approach to understanding questions and working through information.</p>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-card-top">
+                            <span>03</span>
+                            <span>IN MY STUDIES</span>
+                        </div>
+                        <h3>Digital business</h3>
+                        <p>Building my understanding of digital business and entrepreneurship through my BBA studies.</p>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-card-top">
+                            <span>04</span>
+                            <span>AREA OF INTEREST</span>
+                        </div>
+                        <h3>Actuarial sciences</h3>
+                        <p>Learning more about this field and its connection to mathematics, data, and risk.</p>
+                    </article>
+                </div>
+                <p class="skills-note">These are developing interests, not a list of certifications or proficiency claims.</p>
+            </div>
+        </section>
+
+        <section class="contact section-pad skills-next">
+            <div class="page-wrap contact-inner">
+                <div class="section-label"><span>03 / KEEP EXPLORING</span><span class="label-line"></span></div>
+                <p class="eyebrow">EVERY NEW SKILL STARTS WITH CURIOSITY</p>
+                <h2>There’s always<br><span>more to learn.</span></h2>
+                <a class="button button-light" href="index.html#resume">Back to my portfolio <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-wrap footer-inner">
+            <a class="wordmark" href="index.html">GS<span>.</span></a>
+            <p>Gursirat Singh <span>·</span> Resume &amp; Portfolio</p>
+            <a class="back-top" href="#home">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+            navLinks.classList.toggle("is-open", !isOpen);
+        });
+
+        navLinks.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation");
+                navLinks.classList.remove("is-open");
+            }
+        });
+    </script>
+</body>
+</html>

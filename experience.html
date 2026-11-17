@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gursirat Singh's professional interests and experience in development.">
+    <meta name="theme-color" content="#f6f5f0">
+    <title>Experience — Gursirat Singh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="wordmark" href="index.html" aria-label="Gursirat Singh, home">GS<span>.</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation">
+                <span></span><span></span>
+            </button>
+            <div class="nav-links" id="site-menu">
+                <a href="index.html#about">About</a>
+                <a href="index.html#resume">Resume</a>
+                <a href="education.html">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="skills.html">Skills</a>
+                <a href="index.html#highlights">Highlights</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="experience-hero page-wrap" aria-labelledby="experience-title">
+            <div class="experience-hero-copy">
+                <div class="section-label"><span>01 / EXPERIENCE</span><span class="label-line"></span></div>
+                <h1 id="experience-title">Growing through<br><span>what’s next.</span></h1>
+                <p>My professional path is taking shape through study, curiosity, and a desire to put new ideas to work.</p>
+            </div>
+            <aside class="experience-side-note">
+                <span>MY CURRENT CHAPTER</span>
+                <strong>Early career<br>development</strong>
+            </aside>
+        </section>
+
+        <section class="experience-details section-pad" id="experience" aria-labelledby="experience-details-title">
+            <div class="page-wrap">
+                <div class="section-label"><span>02 / PROFESSIONAL JOURNEY</span><span class="label-line"></span></div>
+                <div class="experience-details-heading">
+                    <h2 id="experience-details-title">Building my foundation.</h2>
+                    <p>A growing interest in how numbers, business, and analytical thinking come together.</p>
+                </div>
+
+                <article class="experience-entry">
+                    <div class="experience-entry-date">
+                        <span>October 2026 - Present</span>
+                        <strong>Internship</strong>
+                    </div>
+                    <div class="experience-entry-content">
+                        <h3>LMS Management Intern</h3>
+                        <p class="experience-context">EntranceUG</p>
+                        <p>During my internship at EntranceUG, I have been involved in managing and maintaining the Learning Management System (LMS), ensuring its smooth operation and providing support to users.
+                            Also got great insights from founder of EntranceUG, Mr. Vaibhav Goenka, on how to manage a startup and the challenges faced by startups in India. This experience has provided me with valuable skills in LMS management and a deeper understanding of the startup ecosystem.</p>
+                        </p>
+                    </div>
+                </article>
+
+                <div class="experience-focus">
+                    <p class="eyebrow">WHERE I’M FOCUSING MY ENERGY</p>
+                    <h3>Learning with the future in mind.</h3>
+                    <div class="experience-focus-grid">
+                        <article class="experience-focus-card">
+                            <span>01 / INTEREST</span>
+                            <h4>Finance &amp; numbers</h4>
+                            <p>Exploring the role numbers play in financial decisions and business.</p>
+                        </article>
+                        <article class="experience-focus-card">
+                            <span>02 / INTEREST</span>
+                            <h4>Analytical thinking</h4>
+                            <p>Building a stronger understanding of how to approach questions thoughtfully.</p>
+                        </article>
+                        <article class="experience-focus-card">
+                            <span>03 / NEXT STEP</span>
+                            <h4>Practical experience</h4>
+                            <p>Looking forward to projects and opportunities where I can learn by doing.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section-pad experience-next">
+            <div class="page-wrap contact-inner">
+                <div class="section-label"><span>03 / KEEP EXPLORING</span><span class="label-line"></span></div>
+                <p class="eyebrow">A LITTLE MORE ABOUT ME</p>
+                <h2>Every step<br><span>adds to the story.</span></h2>
+                <a class="button button-light" href="index.html#resume">Back to my portfolio <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-wrap footer-inner">
+            <a class="wordmark" href="index.html">GS<span>.</span></a>
+            <p>Gursirat Singh <span>·</span> Resume &amp; Portfolio</p>
+            <a class="back-top" href="#home">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+            navLinks.classList.toggle("is-open", !isOpen);
+        });
+
+        navLinks.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation");
+                navLinks.classList.remove("is-open");
+            }
+        });
+    </script>
+</body>
+</html>
